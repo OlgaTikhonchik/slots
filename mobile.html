@@ -162,8 +162,8 @@
           <div class="background hero__background">
             <img src="./images/mobile/bg-mobile.svg" alt="hero" title />
           </div>
-          <!-- <div class="hero__wrap"> -->
-          <div class="hero__data">
+
+          <div class="hero__data hero__data-mobile">
             <ul
               class="breadcrumbs"
               itemscope
@@ -195,8 +195,6 @@
 
             <a href="#" class="button hero__button"> Register</a>
           </div>
-
-          <!-- </div> -->
         </section>
         <section class="content page-nav">
           <div class="page-nav sidebar__desk">
@@ -237,13 +235,13 @@
             guia passo a passo para que você possa se juntar a nós nesta jornada
             emocionante, seja você um usuário de iOS ou Android.
           </p>
-          <h3>Para iOS</h3>
+          <h3 class="article__subtitle">Para iOS</h3>
           <p>
             Um dos sistemas operacionais mais populares no Brasil, o iOS da
             Apple também tem o nosso aplicativo dedicado. Para baixar, o
             procedimento é muito simples, seguro e direto.
           </p>
-          <ol>
+          <ol class="article__download">
             <li>Acesse a App Store: Abra a App Store no seu dispositivo iOS</li>
             <li>
               Pesquise por SlotsGem: Utilize a barra de pesquisa para encontrar
@@ -255,14 +253,14 @@
               automaticamente. Abra-o e faça login na sua conta.
             </li>
           </ol>
-          <h4>Para Android</h4>
+          <h4 class="article__subtitle">Para Android</h4>
           <p>
             O Android é o sistema de quase todos os celulares que não são da
             Apple. Por isso, não poderíamos deixar de criar um aplicativo
             exclusivo para os usuários desse dispositivo. Confira como baixar
             seu app da SlotsGem para Android.
           </p>
-          <ol>
+          <ol class="article__download">
             <li>
               Acesse o nosso site: Visite o site do SlotsGem através do
               navegador do seu dispositivo.
@@ -292,12 +290,16 @@
           </p>
         </section>
         <section class="content banner">
-          <div class="background__baner">
+          <div class="background">
             <img src="./images/mobile/mobile-bg1.svg" alt="banner" title />
           </div>
           <div class="banner__data">
-            <a href="#" class="banner__button">Download the IOS app</a>
-            <a href="#" class="banner__button">Download the android app</a>
+            <a href="#" class="banner__button banner__button-ios"
+              >Download the </br> IOS app</a
+            >
+            <a href="#" class="button__button banner__button-android"
+              >Download </br> the android app</a
+            >
           </div>
         </section>
         <section class="content article">
@@ -593,7 +595,7 @@
         </div>
       </section>
     </main>
-    <footer>
+    <footer class="footer">
       <section class="content footer__content">
         <img src="./images/logo-footer.svg" alt="logo" title />
         <ul class="footer__menu">
