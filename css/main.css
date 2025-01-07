@@ -56,7 +56,7 @@ h2,
   /* font-weight: 900; */
   text-align: center;
   color: #ffd400;
-
+  padding: 10px;
   margin-bottom: 16px;
 }
 
@@ -339,7 +339,7 @@ a.button {
   flex: 0 1 auto;
   min-width: 0;
   background: #0b0c21;
-  border: 1px solid #ffffff;
+  border: 1px solid #ffd400;
 
   padding: 15px;
   margin-left: 15px;
@@ -348,7 +348,7 @@ a.button {
 
 svg {
   position: relative;
-  fill: #ffffff;
+  fill: #ffd400;
   line-height: 1;
   vertical-align: 1;
 }
@@ -552,11 +552,17 @@ svg {
 .features__table table {
   display: block;
   width: 100%;
-  border-radius: 20px;
-  border: 1px solid #32334b;
   overflow: hidden;
   margin-top: 16px;
   margin-bottom: 16px;
+}
+
+.features__table table tbody {
+  display: block;
+  width: 100%;
+  border-radius: 20px;
+  border: 1px solid #32334b;
+  overflow: hidden;
   background: #14152d;
 }
 
@@ -709,7 +715,8 @@ tr:first-child td {
 .article__ios,
 .article__android {
   max-width: 807px;
-  max-height: 272px;
+  /* max-height: 272px; */
+  min-height: 272px;
 }
 
 .article__ios p,
@@ -749,7 +756,8 @@ tr:first-child td {
 .article__vip ul li::before,
 .article__desk ul li::before,
 .article__list li::before,
-.article__content ul li::before {
+.article__content ul li::before,
+.article .article__label-list li::before {
   content: "●";
   display: block;
   position: absolute;
@@ -762,8 +770,10 @@ tr:first-child td {
 }
 
 .article__wrapper-last ul li::before,
-.article__vip ul li::before {
+.article__vip ul li::before,
+.article .article__label-list li.article__label-item::before {
   top: 10px;
+  top: 11.5px;
 }
 
 .article .image,
@@ -839,10 +849,17 @@ tr:first-child td {
 
 .article__statistic {
   width: 100%;
-  border: 1px solid #32334b;
+  overflow: hidden;
   border-radius: 20px;
+}
+
+.article__statistic tbody {
+  width: 100%;
+  border: 1px solid #32334b;
+
   overflow: hidden;
 }
+
 .article__statistic tr {
   width: 100%;
   background: #14152d;
@@ -886,6 +903,8 @@ tr:first-child td {
   border: 1px solid #32334b;
   border-radius: 20px;
   flex: 1 1 calc(50% - 16px);
+  overflow: hidden;
+  /* max-height: 368px; */
 }
 
 .article__betting-img {
@@ -916,20 +935,37 @@ tr:first-child td {
   height: 44px;
 }
 
-.article__betting p {
+.article__betting .article__betting-label {
   background: #14152d;
-
   padding: 16px 24px;
+}
+.article .article__betting-text {
+  background: #14152d;
+  border-radius: 0;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  min-height: 264px;
+  min-height: 100%;
+  width: 100%;
+  padding: 16px 24px;
+  border: none;
+}
+
+.article__betting .article__betting-text p + p {
+  margin-top: 16px;
 }
 
 .article__betting p:last-child {
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
+  min-height: 100%;
 }
 
 .article__game-category {
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
   gap: 16px;
   overflow: hidden;
   white-space: normal;
@@ -1008,7 +1044,7 @@ tr:first-child td {
   border-radius: 20px;
 
   border-top-right-radius: 20px;
-  padding: 16px;
+  padding: 16px 40px 16px 16px;
 }
 
 .faq__subtitle.active {
@@ -1072,7 +1108,7 @@ tr:first-child td {
 .review ul li {
   display: flex;
   flex: 1 1 calc(50% - 16px);
-  max-width: calc(50% - 16px);
+  /* max-width: calc(50% - 16px); */
 }
 
 .review__wrapp {
@@ -1152,6 +1188,8 @@ tr:first-child td {
 
 .ratings__list li h3 {
   font-size: 20px;
+  font-weight: 700;
+  text-align: center;
   color: #ffd400;
   margin-bottom: 12px;
 }
@@ -1213,6 +1251,15 @@ tr:first-child td {
   font-size: 14px;
   font-weight: 500;
   color: #ffffff80;
+  padding: 4px 16px;
+  transition: all 0.5s;
+}
+
+.footer__menu li a:hover {
+  border-radius: 20px;
+
+  background: #ffd400;
+  color: #13151b;
   padding: 4px 16px;
 }
 
@@ -1470,4 +1517,44 @@ tr:first-child td {
 .banner__button-android::before {
   background: url(../images/mobile/android.svg) no-repeat center center /
     contain;
+}
+
+.article__text-mobile {
+  padding: 16px;
+  background: #14152d;
+}
+.banner__mobile {
+  min-height: 321px;
+}
+
+.article .article__label {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom: 1px solid #32334b;
+}
+
+.article .article__label-list {
+  position: relative;
+  background: #14152d;
+  min-height: 136px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding: 16px;
+}
+
+.article .article__label-list li {
+  position: relative;
+  padding-left: 20px;
+}
+
+.article__list-mobile {
+  display: flex;
+  gap: 16px;
+  max-width: 100%;
+  height: 100%;
+}
+
+.article__list-item-mobile {
+  flex: 1 1 calc(50% - 16px);
+  min-width: calc(50% - 16px);
 }

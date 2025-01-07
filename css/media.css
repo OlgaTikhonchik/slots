@@ -1,0 +1,513 @@
+@media screen and (max-width: 1368px) {
+  .article__game-category li {
+    flex: 1 1 calc(25% - 16px);
+    max-width: calc(25% - 16px);
+  }
+
+  .article__wrap .article__info {
+    padding-left: 16px;
+  }
+}
+
+@media screen and (max-width: 1270px) {
+  .article__info .article__button-wrap {
+    padding-top: 0;
+  }
+
+  .article__btn-game {
+    justify-content: center;
+  }
+
+  .article__info .article__button-wrap .article__button {
+    position: relative;
+    margin-top: 16px;
+  }
+
+  .article__wrap .article__info {
+    flex-direction: column-reverse;
+    padding-left: 0;
+  }
+}
+
+@media screen and (max-width: 1174px) {
+  .article__game-category li {
+    flex: 1 1 calc(33.333% - 16px);
+    max-width: calc(33.333% - 16px);
+  }
+}
+
+@media screen and (max-width: 1138px) {
+  h2,
+  .title.high {
+    line-height: 45px;
+  }
+}
+
+@media screen and (max-width: 1116px) {
+  .faq__subtitle {
+    font-weight: 500;
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 1108px) {
+  /* -------------------------- */
+  .header__menu {
+    display: none;
+  }
+
+  .header__btn-menu {
+    display: block;
+    background: #0b0c21;
+    border: 1px solid #ffd400;
+
+    border-radius: 8px;
+  }
+
+  .header__btn-menu.active {
+    background: #0b0c21;
+  }
+
+  .header__btn-menu svg {
+    display: block;
+    margin: 0;
+  }
+
+  .header__btn-menu svg rect {
+    transform-origin: 50% 50%;
+    transition: all 0.5s;
+  }
+
+  .header__btn-menu.active svg rect:nth-child(1) {
+    x: -2px;
+    y: 6px;
+    width: 20px;
+    transform: rotate(225deg);
+  }
+
+  .header__btn-menu.active svg rect:nth-child(3) {
+    opacity: 0;
+  }
+
+  .header__btn-menu.active svg rect:nth-child(2) {
+    x: -2px;
+    y: 6px;
+    width: 20px;
+    transform: rotate(135deg);
+  }
+
+  .header__menu {
+    display: none;
+    position: fixed;
+    top: 67px;
+    left: 0;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    background: #0b0c21;
+
+    text-align: center;
+    opacity: 0;
+    padding: 20px 50px;
+    transition: height 0.5s ease, opacity 0.5s ease;
+    z-index: 100;
+    overflow-y: auto;
+  }
+
+  .header__menu.active {
+    display: block;
+    height: 100vh;
+    opacity: 1;
+  }
+
+  .header {
+    z-index: 101;
+  }
+
+  .header__menu ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .header__menu ul li {
+    font-size: 24px;
+    white-space: nowrap;
+  }
+
+  .header__menu-list li + li {
+    margin-left: 0;
+  }
+
+  .header__menu ul li + li {
+    margin-top: 10px;
+  }
+  .menu ul {
+    gap: 10px;
+  }
+
+  .menu ul li:not(:last-child) {
+    margin-right: 0;
+  }
+
+  .menu ul li a {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  .header__btn {
+    display: inline-block;
+  }
+
+  .header__btn a.header__btn-login,
+  .header__btn a.header__btn-signin {
+    display: block;
+    min-width: 220px;
+    margin-top: 16px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .header__btn a.header__btn-signin {
+    margin-top: 0;
+  }
+
+  /* ----------------------- */
+
+  .sidebar-wrapper {
+    display: none;
+  }
+
+  .page-nav {
+    display: block;
+  }
+
+  .content__wrapper {
+    margin-left: 0;
+  }
+
+  .faq__subtitle {
+    font-weight: 700;
+    font-size: 20px;
+  }
+
+  .article__wrap .article__info {
+    flex-direction: row;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .article__wrap .article__info {
+    flex-direction: column-reverse;
+  }
+}
+
+@media screen and (max-width: 863px) {
+  .hero__data {
+    padding-top: 70px;
+  }
+
+  .article .image {
+    display: none;
+  }
+
+  .article__vip ul {
+    margin-left: 0;
+  }
+  .article__vip {
+    justify-content: center;
+  }
+
+  .article__desk {
+    max-width: 100%;
+  }
+
+  .ratings__list li {
+    flex: 1 1 calc(50% - 16px);
+    max-width: calc(50% - 16px);
+  }
+}
+
+@media screen and (max-width: 737px) {
+  .header__logo {
+    margin-right: 0;
+  }
+
+  .faq__subtitle {
+    font-weight: 500;
+    font-size: 18px;
+  }
+
+  h2,
+  .title.high {
+    font-size: 30px;
+  }
+
+  .article__betting {
+    flex-direction: column;
+  }
+
+  .features__list {
+    flex-direction: column;
+    background: none;
+    border: none;
+  }
+
+  .features__info {
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #14152d;
+  }
+
+  .features__info + .features__info {
+    margin-top: 20px;
+  }
+
+  .article__statistic,
+  .features__table table {
+    width: 660px;
+    /* overflow: scroll; */
+    border: 2px solid #ffd400;
+    border-radius: 20px;
+    display: block;
+    overflow: auto;
+    max-width: 100%;
+  }
+
+  .article__statistic tbody {
+    display: block;
+    width: 900px;
+  }
+
+  .features__table table tbody {
+    width: 800px;
+  }
+
+  .article__statistic::-webkit-scrollbar,
+  .features__table table::-webkit-scrollbar {
+    height: 3px;
+  }
+
+  .article__statistic::-webkit-scrollbar-track,
+  .features__table table::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0);
+  }
+
+  .article__statistic::-webkit-scrollbar-thumb,
+  .features__table table::-webkit-scrollbar-thumb {
+    background: #ffd400;
+  }
+
+  .main {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 718px) {
+  .article__game-category li {
+    flex: 1 1 calc(50% - 16px);
+    max-width: calc(50% - 16px);
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .article__wrapper ul li::before {
+    top: 10px;
+  }
+}
+
+@media screen and (max-width: 661px) {
+  .header__button-signin {
+    display: none;
+  }
+
+  .header__logo {
+    margin-right: auto;
+  }
+
+  table tr:first-child td,
+  .features__list .features__subtitle {
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  .hero__data {
+    padding-top: 50px;
+  }
+
+  .article__game-category h4 {
+    font-size: 24px;
+    font-weight: 700;
+  }
+}
+
+@media screen and (max-width: 652px) {
+  .hero__title {
+    font-size: 38px;
+    line-height: 50px;
+    text-align: center;
+  }
+
+  .hero__data {
+    padding: 50px;
+  }
+
+  .hero__rating {
+    justify-content: center;
+  }
+
+  .hero__button {
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .review ul,
+  .ratings__list,
+  .article__game-category {
+    flex-direction: column;
+  }
+
+  .review ul li,
+  .article__game-category li {
+    display: block;
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .ratings__list li {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .article__betting-img span {
+    font-weight: 700;
+  }
+
+  .article__list li::before {
+    top: 11.5px;
+  }
+  .content {
+    padding: 15px;
+  }
+
+  .article .article__wrap {
+    padding: 0;
+    border: none;
+  }
+
+  .hero__data {
+    padding: 40px 30px 30px 30px;
+  }
+}
+
+@media screen and (max-width: 514px) {
+  .header__button-login {
+    display: none;
+  }
+
+  .header__menu ul li {
+    font-size: 20px;
+  }
+  h2,
+  .title.high {
+    font-size: 28px;
+    line-height: 35px;
+  }
+
+  .article h3 {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 28px;
+  }
+
+  .faq__subtitle {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+    padding: 10px 40px 10px 16px;
+  }
+
+  .faq__subtitle::after {
+    right: 10px;
+  }
+}
+
+@media screen and (max-width: 508px) {
+  .features__list-negative li::before {
+    top: 32px;
+  }
+}
+
+@media screen and (max-width: 461px) {
+  .article__game-category {
+    flex-direction: column;
+  }
+
+  .article__game-category li {
+    max-width: 100%;
+  }
+
+  .main {
+    padding: 10px;
+  }
+
+  .hero__title {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .hero__data {
+    top: 67px;
+  }
+}
+
+@media screen and (max-width: 446px) {
+  .hero__data {
+    padding-top: 10px;
+  }
+}
+
+@media screen and (max-width: 427px) {
+  .faq__subtitle::after {
+    top: 22px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .hero__title {
+    font-size: 28px;
+  }
+
+  .hero__data {
+    padding: 30px 5px;
+  }
+
+  .features__list-positive li::before {
+    top: 32px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .hero__title {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+
+  .button {
+    width: 220px;
+  }
+}
+
+@media screen and (max-width: 367px) {
+  .header__content {
+    padding: 13px 10px;
+  }
+
+  .header__logo {
+    flex: 0 0 160px;
+  }
+}
