@@ -273,6 +273,8 @@ a.button {
 .header__menu {
   display: flex;
   white-space: nowrap;
+  max-height: calc(100vh - 60px);
+  overflow: auto;
 }
 
 .header__menu-list {
