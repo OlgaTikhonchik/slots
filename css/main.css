@@ -550,7 +550,6 @@ svg {
 }
 
 .features__table table {
-  display: block;
   width: 100%;
   overflow: hidden;
   margin-top: 16px;
@@ -828,6 +827,14 @@ tr:first-child td {
   flex-direction: row;
   flex-wrap: wrap;
   gap: 10px;
+}
+
+.article__btn-game li {
+  transition: all 0.5s;
+}
+
+.article__btn-game li:hover {
+  transform: scale(1.05);
 }
 
 .article__btn-game li a {
@@ -1196,13 +1203,13 @@ tr:first-child td {
 /* ---------main__arrow------ */
 .main__arrow {
   display: block;
-  /* position: absolute; */
+
   position: fixed;
   width: 42px;
   height: 42px;
-  /* right: 0; */
+
   right: 20px;
-  /* bottom: -30px; */
+
   bottom: 20px;
   background: url(../images/arrowUp.svg) no-repeat center center / contain;
   z-index: 100;
@@ -1229,6 +1236,7 @@ tr:first-child td {
   padding: 0;
   margin: 0 auto;
 }
+
 .footer__logo img {
   display: block;
 }
@@ -1273,11 +1281,16 @@ tr:first-child td {
 .footer__country-list li {
   border-radius: 8px;
   background: linear-gradient(0deg, #14152d 0%, #45465e 100%);
+  transition: all 0.5s;
 }
 
 .footer__country-list li a {
   display: block;
   padding: 12px;
+}
+
+.footer__country-list li:hover {
+  transform: scale(1.1);
 }
 
 .footer__country-item span {
@@ -1481,6 +1494,7 @@ tr:first-child td {
 .banner__button-ios,
 .banner__button-android {
   display: flex;
+  justify-content: center;
   min-width: 240px;
   height: 64px;
   border-radius: 8px;
@@ -1500,6 +1514,12 @@ tr:first-child td {
 }
 .banner__button-android {
   padding: 16px 38px;
+}
+
+.banner__button-ios:hover,
+.banner__button-android:hover {
+  background: #ffd400;
+  border: 1px solid #ffffff;
 }
 
 .banner__button-ios::before,
@@ -1523,8 +1543,24 @@ tr:first-child td {
   padding: 16px;
   background: #14152d;
 }
-.banner__mobile {
+.banner__mobile-last {
   min-height: 321px;
+}
+
+.banner__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.banner__logo {
+  flex: 0 0 276px;
+  padding: 0;
+  margin-right: 0;
+}
+
+.banner__logo img {
+  max-height: 73px;
 }
 
 .article .article__label {
@@ -1536,7 +1572,9 @@ tr:first-child td {
 .article .article__label-list {
   position: relative;
   background: #14152d;
-  min-height: 136px;
+
+  min-height: 156px;
+
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   padding: 16px;
@@ -1555,6 +1593,8 @@ tr:first-child td {
 }
 
 .article__list-item-mobile {
+  display: flex;
+  flex-direction: column;
   flex: 1 1 calc(50% - 16px);
   min-width: calc(50% - 16px);
 }
