@@ -380,10 +380,13 @@ svg {
 }
 .sidebar {
   position: sticky;
+
   top: 67px;
   bottom: 20px;
   background: linear-gradient(180deg, #0b0c21 0%, #08091c 20.16%, #0b0c21 100%);
   padding: 16px;
+  overflow: auto;
+  height: calc(100vh - 100px);
 }
 
 .sidebar__menu ul li a {
