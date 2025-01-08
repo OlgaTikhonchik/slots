@@ -389,6 +389,10 @@ svg {
   height: calc(100vh - 100px);
 }
 
+.sidebar::-webkit-scrollbar {
+  display: none;
+}
+
 .sidebar__menu ul li a {
   display: block;
   position: relative;
