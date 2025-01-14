@@ -1,3 +1,9 @@
+html {
+  scroll-behavior: smooth;
+}
+
+
+
 body {
   display: block;
   position: relative;
@@ -34,7 +40,7 @@ h4,
   display: block;
   position: relative;
   font-size: 43px;
-  font-weight: 700;
+  font-weight: 900;
   line-height: 60px;
   text-align: center;
   color: #ffffff;
@@ -53,7 +59,7 @@ h2,
   align-items: center;
   font-size: 38px;
   line-height: 56px;
-  /* font-weight: 900; */
+  font-weight: 900;
   text-align: center;
   color: #ffd400;
   padding: 10px;
@@ -106,7 +112,8 @@ article > h4,
 }
 
 .button {
-  position: absolute;
+  /* position: absolute; */
+  position: relative;
   width: 264px;
   height: 78px;
 
@@ -343,9 +350,10 @@ a.button {
   background: #0b0c21;
   border: 1px solid #ffd400;
 
-  padding: 15px;
-  margin-left: 15px;
+  padding: 12px;
+  
   order: 3;
+  transition: all 0.5s;
 }
 
 svg {
@@ -450,8 +458,8 @@ svg {
   background: none;
   white-space: normal;
   padding-right: 48px;
-
   margin-bottom: 10px;
+  transition: all 0.5s;
 }
 
 .sidebar__links-button::after {
@@ -464,10 +472,12 @@ svg {
   width: 25px;
   height: 25px;
   background: url(../images/sidebar/plus.svg) no-repeat center center / contain;
+  transition: all 0.5s;
 }
 
 .sidebar__links-button.active::after {
   background: url(../images/sidebar/minus.svg) no-repeat center center / contain;
+  transition: all 0.5s;
 }
 
 .sidebar__links-list li a {
@@ -478,6 +488,7 @@ svg {
 
 .sidebar__links-list {
   display: none;
+  transition: all 0.5s;
 }
 .sidebar__links-list.active {
   display: block;
@@ -510,17 +521,28 @@ svg {
   min-height: 447px;
   padding: 0;
   border-radius: 0;
+  padding: 85px 40px;
 }
 
 .hero__data {
-  display: block;
+  /* display: block; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;align-items: center;
   position: relative;
-  padding: 85px 120px 85px 40px;
+  /* padding: 85px 120px 85px 40px; */
+
+  max-width: 850px;
+  
+  padding: 15px;
+
 }
 
 .hero__title {
-  text-align: left;
+  /* text-align: left; */
+  text-align: center;
   margin-bottom: 30px;
+  
 }
 
 .hero__title span {
@@ -757,6 +779,7 @@ tr:first-child td {
 .article__wrapper ul li span,
 .article__vip ul span {
   color: #ffd400;
+  font-weight: 700;
 }
 
 .article__wrapper ul li::before,
@@ -766,22 +789,30 @@ tr:first-child td {
 .article__list li::before,
 .article__content ul li::before,
 .article .article__label-list li::before {
-  content: "●";
+  
+  content:'';
   display: block;
   position: absolute;
-  width: 24px;
-  height: 24px;
+  width: 11px;
+  height: 11px;
   left: 0;
   top: 50%;
   transform: translateY(-50%);
-  color: #ffd400;
+  
+  background: #ffd400;
+  border-radius: 50%;
+ 
+ 
+    
+  
 }
 
 .article__wrapper-last ul li::before,
 .article__vip ul li::before,
 .article .article__label-list li.article__label-item::before {
-  top: 10px;
-  top: 11.5px;
+  /* top: 10px;
+  top: 11.5px; */
+  top: 12px;
 }
 
 .article .image,
@@ -1058,8 +1089,8 @@ tr:first-child td {
   background: linear-gradient(0deg, #14152d 0%, #45465e 100%);
   border: 1px solid #32334b;
   border-radius: 20px;
-
   border-top-right-radius: 20px;
+  cursor: pointer;
   padding: 16px 40px 16px 16px;
 }
 
@@ -1078,10 +1109,12 @@ tr:first-child td {
   width: 24px;
   height: 24px;
   background: url(../images/faq-plus.svg) no-repeat center center / contain;
+  transition: all 0.5s;
 }
 
 .faq__subtitle.active::after {
   background: url(../images/faq-minus.svg) no-repeat center center / contain;
+  transition: all 0.5s;
 }
 .faq__answer {
   background: #14152d;
@@ -1329,6 +1362,7 @@ tr:first-child td {
 .breadcrumbs {
   display: flex;
   text-align: center;
+  justify-content: center;
   margin-bottom: 16px;
   white-space: nowrap;
 }
@@ -1360,9 +1394,14 @@ tr:first-child td {
   position: relative;
 }
 
+.hero__bonus,.hero__mobile{
+  padding: 38px 40px;
+  
+}
+
 .hero__data-bonus,
 .hero__data-mobile {
-  padding: 30px 394px 38px 40px;
+ bottom: 0;
 }
 
 .hero__data-bonus h1 {
@@ -1371,14 +1410,15 @@ tr:first-child td {
 
 .hero__data-bonus p {
   margin-bottom: 30px;
+  text-align: center;
 }
 
 .background__article {
   position: relative;
   width: 100%;
-  height: 304px;
-  /* border-radius: 20px;
-  overflow: hidden; */
+  min-height: 304px;
+  /* min-height: 100vh; */
+  
 }
 
 .background__article img {
@@ -1470,9 +1510,13 @@ tr:first-child td {
   margin-right: 94px;
   max-width: 706px;
 }
-.article__info .article__button-wrapp {
-  padding-bottom: 119px;
+
+.article__info .article__button-wrap-bonus{
+  padding-top: 0;
 }
+
+
+
 /* -------MOBILE PAGE--------- */
 .article .article__download {
   background: none;
