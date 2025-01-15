@@ -2,8 +2,6 @@ html {
   scroll-behavior: smooth;
 }
 
-
-
 body {
   display: block;
   position: relative;
@@ -112,14 +110,11 @@ article > h4,
 }
 
 .button {
-  /* position: absolute; */
   position: relative;
   width: 264px;
   height: 78px;
-
   background: url(../images/button-register.svg) no-repeat center center /
     contain;
-
   overflow: hidden;
   font-size: 18px;
   font-weight: 700;
@@ -130,7 +125,6 @@ article > h4,
   color: #ffffff;
   white-space: nowrap;
   cursor: pointer;
-  /* padding: 12px 79px; */
   margin: 0 auto;
   transition: all 0.5s;
 }
@@ -212,7 +206,6 @@ a.button {
   height: 100%;
   width: 100%;
   overflow: hidden;
-  /* z-index: -1; */
 }
 
 .background img,
@@ -222,7 +215,6 @@ a.button {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* border-radius: 3px; */
 }
 .images img {
   border-radius: 3px;
@@ -238,7 +230,6 @@ a.button {
   top: 0;
   left: 0;
   right: 0;
-
   background: #0b0c21;
   padding: 0;
   z-index: 100;
@@ -274,7 +265,6 @@ a.button {
   position: relative;
   width: auto;
   max-height: 40px;
-  /* margin: 0 auto; */
 }
 
 .header__menu {
@@ -298,9 +288,7 @@ a.button {
   display: block;
   text-align: left;
   text-transform: capitalize;
-
   line-height: 24px;
-
   transition: all 0.5s;
 }
 
@@ -349,9 +337,7 @@ a.button {
   min-width: 0;
   background: #0b0c21;
   border: 1px solid #ffd400;
-
   padding: 12px;
-  
   order: 3;
   transition: all 0.5s;
 }
@@ -390,7 +376,6 @@ svg {
 }
 .sidebar {
   position: sticky;
-
   top: 67px;
   bottom: 20px;
   background: linear-gradient(180deg, #0b0c21 0%, #08091c 20.16%, #0b0c21 100%);
@@ -434,7 +419,6 @@ svg {
   position: relative;
   height: 1px;
   width: 100%;
-
   background: linear-gradient(
     90deg,
     #2b1234 0%,
@@ -444,7 +428,6 @@ svg {
     #2b1234 100%,
     #292526 100%
   );
-
   margin: 20px 0;
 }
 
@@ -460,6 +443,7 @@ svg {
   padding-right: 48px;
   margin-bottom: 10px;
   transition: all 0.5s;
+  transition: all 0.5s linear;
 }
 
 .sidebar__links-button::after {
@@ -467,7 +451,6 @@ svg {
   display: block;
   position: absolute;
   right: 0;
-
   top: 0;
   width: 25px;
   height: 25px;
@@ -486,13 +469,14 @@ svg {
   transition: all 0.5s;
 }
 
-.sidebar__links-list {
+/* .sidebar__links-list {
   display: none;
   transition: all 0.5s;
+  transition: max-height 0.3s ease;
 }
 .sidebar__links-list.active {
   display: block;
-}
+} */
 
 .sidebar__links-list li a:hover {
   color: #ffd400;
@@ -507,12 +491,25 @@ svg {
   margin-bottom: 0;
 }
 
-.page-nav-list {
-  margin-top: 20px;
-}
-
 .page-nav {
   display: none;
+}
+
+.sidebar__links-list,
+.page-nav-list {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.5s ease;
+}
+
+.sidebar__links-list.active,
+.page-nav-list.active {
+  display: block;
+  max-height: 1000px;
+}
+
+.page-nav-list.active {
+  margin-top: 20px;
 }
 
 /* -----------hero------ */
@@ -525,24 +522,18 @@ svg {
 }
 
 .hero__data {
-  /* display: block; */
   display: flex;
   flex-direction: column;
-  justify-content: center;align-items: center;
+  justify-content: center;
+  align-items: center;
   position: relative;
-  /* padding: 85px 120px 85px 40px; */
-
   max-width: 850px;
-  
   padding: 15px;
-
 }
 
 .hero__title {
-  /* text-align: left; */
   text-align: center;
   margin-bottom: 30px;
-  
 }
 
 .hero__title span {
@@ -656,7 +647,6 @@ tr:first-child td {
 .features__list-negative li::before {
   content: "";
   position: absolute;
-
   display: block;
   width: 24px;
   height: 24px;
@@ -745,14 +735,12 @@ tr:first-child td {
 .article__ios,
 .article__android {
   max-width: 807px;
-  /* max-height: 272px; */
   min-height: 272px;
 }
 
 .article__ios p,
 .article__android p {
   background: #14152d;
-
   padding: 16px 16px 0 16px;
 }
 
@@ -789,8 +777,7 @@ tr:first-child td {
 .article__list li::before,
 .article__content ul li::before,
 .article .article__label-list li::before {
-  
-  content:'';
+  content: "";
   display: block;
   position: absolute;
   width: 11px;
@@ -798,20 +785,13 @@ tr:first-child td {
   left: 0;
   top: 50%;
   transform: translateY(-50%);
-  
   background: #ffd400;
   border-radius: 50%;
- 
- 
-    
-  
 }
 
 .article__wrapper-last ul li::before,
 .article__vip ul li::before,
 .article .article__label-list li.article__label-item::before {
-  /* top: 10px;
-  top: 11.5px; */
   top: 12px;
 }
 
@@ -903,7 +883,6 @@ tr:first-child td {
 .article__statistic tbody {
   width: 100%;
   border: 1px solid #32334b;
-
   overflow: hidden;
 }
 
@@ -951,7 +930,6 @@ tr:first-child td {
   border-radius: 20px;
   flex: 1 1 calc(50% - 16px);
   overflow: hidden;
-  /* max-height: 368px; */
 }
 
 .article__betting-img {
@@ -960,7 +938,6 @@ tr:first-child td {
   justify-content: center;
   align-items: center;
   background: linear-gradient(0deg, #14152d 0%, #45465e 100%);
-
   padding: 10px;
 }
 .article__betting .article__betting-img {
@@ -1114,22 +1091,27 @@ tr:first-child td {
 
 .faq__subtitle.active::after {
   background: url(../images/faq-minus.svg) no-repeat center center / contain;
-  transition: all 0.5s;
+  transition: all 0.5s ease-in-out;
 }
 .faq__answer {
   background: #14152d;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
-  padding: 16px;
+  overflow: hidden;
+  max-height: 0;
+  padding: 0;
+  transition: max-height 0.5s ease, padding 0.5s ease;
+  transform-origin: top;
+  transform: scaleY(0);
 }
+
 .faq__item + .faq__item {
   margin-top: 16px;
 }
 
-.js-expand-content {
-  display: none;
-  overflow: hidden;
-  transition: max-height 0.3s ease;
+.faq__answer.active {
+  padding: 16px;
+  max-height: 1000px;
 }
 
 /* -------review----- */
@@ -1157,7 +1139,6 @@ tr:first-child td {
 .review ul li {
   display: flex;
   flex: 1 1 calc(50% - 16px);
-  /* max-width: calc(50% - 16px); */
 }
 
 .review__wrapp {
@@ -1245,13 +1226,10 @@ tr:first-child td {
 /* ---------main__arrow------ */
 .main__arrow {
   display: block;
-
   position: fixed;
   width: 42px;
   height: 42px;
-
   right: 20px;
-
   bottom: 20px;
   background: url(../images/arrowUp.svg) no-repeat center center / contain;
   z-index: 100;
@@ -1271,10 +1249,8 @@ tr:first-child td {
 
 .footer__logo {
   display: flex;
-
   max-height: 40px;
   flex: 0 0 152px;
-
   padding: 0;
   margin: 0 auto;
 }
@@ -1292,7 +1268,6 @@ tr:first-child td {
   justify-content: center;
   border-radius: 20px;
   border: 1px solid #ffffff1a;
-
   padding: 4px 32px;
 }
 
@@ -1307,7 +1282,6 @@ tr:first-child td {
 
 .footer__menu li a:hover {
   border-radius: 20px;
-
   background: #ffd400;
   color: #13151b;
   padding: 4px 16px;
@@ -1394,14 +1368,14 @@ tr:first-child td {
   position: relative;
 }
 
-.hero__bonus,.hero__mobile{
+.hero__bonus,
+.hero__mobile {
   padding: 38px 40px;
-  
 }
 
 .hero__data-bonus,
 .hero__data-mobile {
- bottom: 0;
+  bottom: 0;
 }
 
 .hero__data-bonus h1 {
@@ -1417,8 +1391,6 @@ tr:first-child td {
   position: relative;
   width: 100%;
   min-height: 304px;
-  /* min-height: 100vh; */
-  
 }
 
 .background__article img {
@@ -1463,9 +1435,7 @@ tr:first-child td {
   left: 0;
   width: 100%;
   height: 100%;
-
   z-index: 1;
-
   padding: 60px 403px 20px 16px;
 }
 
@@ -1511,11 +1481,9 @@ tr:first-child td {
   max-width: 706px;
 }
 
-.article__info .article__button-wrap-bonus{
+.article__info .article__button-wrap-bonus {
   padding-top: 0;
 }
-
-
 
 /* -------MOBILE PAGE--------- */
 .article .article__download {
@@ -1583,7 +1551,6 @@ tr:first-child td {
   width: 32px;
   height: 32px;
   right: 16px;
-
   background: url(../images/mobile/apple.svg) no-repeat center center / contain;
 }
 
