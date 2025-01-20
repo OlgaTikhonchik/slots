@@ -1,41 +1,49 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const faqItems = document.querySelectorAll(".faq__item");
 
-  faqItems.forEach((item) => {
-    const button = item.querySelector(".faq__subtitle");
-    const answer = item.querySelector(".faq__answer");
+// Expander
+// expanderList = document.querySelectorAll(".js-button-expander");
 
-    if (button && answer) {
-      answer.style.height = "0";
-      answer.style.transform = "scaleY(0)";
+// $(".js-button-expander").click(function (e) {
+//   var expandParent = $(this).parent();
+//   var expandTarget = $(expandParent).children(".js-expand-content");
+//   var expandButton = $(expandParent).children(".js-button-expander");
 
-      button.addEventListener("click", () => {
-        const isActive = answer.classList.contains("active");
+//   for (var i = 0; i < expanderList.length; i++) {
+//     if (expanderList[i] == this) {
+//       for (var j = 0; j < expandTarget.length; j++) {
+//         if ($(expandTarget[j]).hasClass("expanded")) {
+//           $(expandParent).removeClass("active");
+//           $(expandTarget[j]).removeClass("expanded");
+//           $(expandButton).removeClass("active");
+//           $(expandTarget[j]).slideUp();
+//         } else {
+//           $(expandParent).addClass("active");
+//           $(expandButton).addClass("active");
+//           $(expandTarget[j]).addClass("expanded");
+//           $(expandTarget[j]).slideDown();
+//         }
+//       }
+//     }
+//   }
+// });
 
-        if (isActive) {
-          closeAnswer(answer);
-        } else {
-          openAnswer(answer);
-        }
 
-        answer.classList.toggle("active", !isActive);
-        button.classList.toggle("active", !isActive);
-      });
+expanderList = document.querySelectorAll(".js-button-expander");
+$(document).ready(function () {
+  $(".js-button-expander").click(function () {
+    var $expandParent = $(this).parent();
+    var $expandTarget = $expandParent.children(".js-expand-content");
+
+    if ($expandTarget.hasClass("expanded")) {
+      $expandParent.removeClass("active");
+      $expandTarget.removeClass("expanded").slideUp();
+      $(this).removeClass("active");
+    } else {
+      $(".js-expand-content.expanded").slideUp().removeClass("expanded").parent().removeClass("active");
+      $(".js-button-expander.active").removeClass("active");
+
+      $expandParent.addClass("active");
+      $expandTarget.addClass("expanded").slideDown();
+      $(this).addClass("active");
     }
   });
-
-  function openAnswer(answer) {
-    const fullHeight = answer.scrollHeight;
-    answer.style.transition = "none";
-    answer.style.height = "auto";
-    requestAnimationFrame(() => {
-      answer.style.transition = "transform 0.5s ease, padding 0.5s ease";
-      answer.style.transform = "scaleY(1)";
-    });
-  }
-
-  function closeAnswer(answer) {
-    answer.style.transition = "transform 0.5s ease, padding 0.5s ease";
-    answer.style.transform = "scaleY(0)";
-  }
 });

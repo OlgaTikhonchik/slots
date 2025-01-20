@@ -442,6 +442,7 @@ svg {
   white-space: normal;
   padding-right: 48px;
   margin-bottom: 10px;
+  cursor: pointer;
   transition: all 0.5s;
   transition: all 0.5s linear;
 }
@@ -469,14 +470,6 @@ svg {
   transition: all 0.5s;
 }
 
-/* .sidebar__links-list {
-  display: none;
-  transition: all 0.5s;
-  transition: max-height 0.3s ease;
-}
-.sidebar__links-list.active {
-  display: block;
-} */
 
 .sidebar__links-list li a:hover {
   color: #ffd400;
@@ -525,14 +518,14 @@ svg {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   position: relative;
   max-width: 850px;
   padding: 15px;
 }
 
 .hero__title {
-  text-align: center;
+  text-align: left;
   margin-bottom: 30px;
 }
 
@@ -562,6 +555,10 @@ svg {
   font-weight: 700;
   font-size: 24px;
   line-height: 32px;
+}
+
+.hero__button{
+  margin-left: 0;
 }
 /* ------------features----------- */
 .features__link {
@@ -1094,24 +1091,30 @@ tr:first-child td {
   transition: all 0.5s ease-in-out;
 }
 .faq__answer {
+  position: relative;
   background: #14152d;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
+  padding: 16px;
   overflow: hidden;
-  max-height: 0;
-  padding: 0;
-  transition: max-height 0.5s ease, padding 0.5s ease;
-  transform-origin: top;
-  transform: scaleY(0);
+  
 }
 
 .faq__item + .faq__item {
   margin-top: 16px;
 }
 
-.faq__answer.active {
-  padding: 16px;
-  max-height: 1000px;
+
+
+.js-expand-content {
+  display: none;
+  overflow: hidden;
+}
+
+
+.js-expand-content.expanded {
+  
+  height: 100%;
 }
 
 /* -------review----- */
@@ -1336,7 +1339,7 @@ tr:first-child td {
 .breadcrumbs {
   display: flex;
   text-align: center;
-  justify-content: center;
+  justify-content: flex-start;
   margin-bottom: 16px;
   white-space: nowrap;
 }
@@ -1384,7 +1387,7 @@ tr:first-child td {
 
 .hero__data-bonus p {
   margin-bottom: 30px;
-  text-align: center;
+  text-align: left;
 }
 
 .background__article {
