@@ -295,6 +295,7 @@ a.button {
 .header__menu-list li a {
   display: block;
   color: #ffffff;
+  font-weight: 700;
   padding: 20px 0;
 }
 
@@ -388,6 +389,8 @@ svg {
   display: none;
 }
 
+.sidebar__menu ul li{display: flex;}
+
 .sidebar__menu ul li a {
   display: block;
   position: relative;
@@ -397,13 +400,22 @@ svg {
   padding-top: 16px;
   padding-bottom: 16px;
   transition: all 0.5s;
+  display: flex;
+}
+
+.sidebar__menu ul li:nth-child(3) a img{
+ margin-right: 5px;
+}
+
+.sidebar__menu ul li:nth-child(3) a {
+  align-items: flex-end;
 }
 
 .sidebar__menu ul li a:hover {
   color: #ffd400;
 }
 .sidebar__menu ul li + li {
-  margin-top: 4px;
+  /* margin-top: 4px; */
 }
 .sidebar__menu li a img {
   min-width: 24px;
